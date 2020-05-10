@@ -1,10 +1,16 @@
 package com.neimerc.hibernate.demo.entity;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.CollectionTable;
 import javax.persistence.Column;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OrderColumn;
 import javax.persistence.Table;
 
 @Entity
@@ -24,6 +30,12 @@ public class Student {
 	@Column(name = "email")
 	private String email;
 
+	@ElementCollection
+	@CollectionTable(name = "image")
+	@OrderColumn
+	@Column(name = "file_name")
+	private List<String> images = new ArrayList<>(); 
+	
 	public Student(String firstName, String lastName, String email) {
 		super();
 		this.firstName = firstName;
@@ -61,6 +73,14 @@ public class Student {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public List<String> getImages() {
+		return images;
+	}
+
+	public void setImages(List<String> images) {
+		this.images = images;
 	}
 
 	@Override
