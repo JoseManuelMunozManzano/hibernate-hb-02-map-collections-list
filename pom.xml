@@ -6,7 +6,8 @@
 
   <groupId>com.neimerc</groupId>
   <artifactId>hibernate-hb-02-map-collections-list</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>1.0</version>
+  <packaging>jar</packaging>
 
   <name>hibernate-hb-02-map-collections-list</name>
 
