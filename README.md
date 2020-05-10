@@ -13,3 +13,5 @@ For ease of development and testing, we'll use auto configuration
 Database tables are dropped first and then created from scratch.
 
 Do this only in development/testing!!!
+
+Note: See sql-scripts folder. Inside are the SQLs that you need to create the schema.
